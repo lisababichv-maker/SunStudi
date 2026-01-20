@@ -1,6 +1,6 @@
 .footer {
   font-family: 'Montserrat', sans-serif;
-  background: gray;
+  background-color: antiquewhite;
   padding: 40px 20px;
   font-weight: 400;
 }
@@ -11,7 +11,6 @@
   border: 1px solid #e0e0e0;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 25px 30px;
 }
 
 .footer-container {
@@ -57,9 +56,12 @@
   align-items: flex-end;
 }
 
-
 .footer-logo img {
-  width: 160px;
+  width: 270px;
+}
+
+.footer-logo p {
+  padding-right: 10px;
 }
 
 .footer-list li,
@@ -97,9 +99,58 @@
 }
 
 .footer-list li:first-child img:last-child {
-  grid-column: 3;
+  grid-column: 2.;
 }
 
 .footer-list li:first-child img:last-child {
   margin-left: 6px;
+}
+
+.footer-border {
+  position: relative;
+  overflow: visible;
+}
+.footer-photo {
+  position: relative;
+  padding-left: 80px; 
+}
+
+.footer-photo img {
+  display: block;
+  position: relative;
+  z-index: 2;
+
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+.footer-photo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: calc(100% - 280px); 
+  height: 100px;           
+  background: red;
+
+  transform: translateY(-50%);
+}
+
+.footer-border {
+  padding-top: 20px; 
+  padding-bottom:20px; 
+}
+
+.footer-photo img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #fff;
+}
+
+.footer-title {
+  white-space: nowrap;
+}
+
+.footer-list li:first-child img:last-child {
+  margin-left: -6px;
 }
